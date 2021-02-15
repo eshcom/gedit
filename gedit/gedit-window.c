@@ -2488,7 +2488,7 @@ bottom_panel_visibility_changed (GtkWidget   *panel_box,
 	/* focus the right widget */
 	if (visible)
 	{
-		gtk_widget_grab_focus (window->priv->side_panel);
+		gtk_widget_grab_focus (window->priv->bottom_panel);
 	}
 	else
 	{
@@ -2585,7 +2585,7 @@ init_panels_visibility (GeditWindow *window)
 	{
 		panel_page = g_settings_get_string (window->priv->window_settings,
 		                                    GEDIT_SETTINGS_BOTTOM_PANEL_ACTIVE_PAGE);
-		panel_child = gtk_stack_get_child_by_name (GTK_STACK (window->priv->side_panel),
+		panel_child = gtk_stack_get_child_by_name (GTK_STACK (window->priv->bottom_panel),
 		                                           panel_page);
 		if (panel_child)
 		{
